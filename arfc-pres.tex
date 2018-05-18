@@ -26,6 +26,7 @@
 
 %\usepackage{bbding}
 \usepackage{amsfonts}
+\usepackage{lipsum}
 \usepackage{adjustbox}
 \usepackage{fancyvrb}
 \usepackage{amsmath}
@@ -54,6 +55,14 @@
     }{}
 \makeatother
 
+
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
 
 \usepackage{booktabs} % nice rules (thick lines) for tables
 \usepackage{microtype} % improves typography for PDF

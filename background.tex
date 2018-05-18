@@ -24,20 +24,25 @@
     
 \begin{figure}[H]
 \centering
+\scalebox{0.7}{
 \begin{tikzpicture}[node distance=1.5cm]
 \node (Build) [process] {Build (kernel)};
 \node (Tick) [process, below of=Build] {Tick (agent)};
 \node (DRE) [process, below of=Tick]{Dynamic Resource Exchange (kernel) };
 \node (Tock) [process, below of=DRE]{Tock (agent)};
 \node (Decom) [process, below of=Tock] {Decommission (kernel)};
+\node (Decision) [process, below of=Decom] {\footnotemark Decision (agent)};
 
 \draw [arrow] (Build) -- (Tick); 
 \draw [arrow] (Tick) -- (DRE);
 \draw [arrow] (DRE) -- (Tock);
 \draw [arrow] (Tock) -- (Decom);
+\draw [arrow] (Decom) -- (Decision);
 \end{tikzpicture}
+}
 \end{figure}
 
+\footnotetext{Decision phase is planned to be added in the next release.}
 \end{frame}
 
 \begin{frame}
@@ -73,13 +78,16 @@
 	Since Cyclus is an extensible framework, anyone can develop a new archetype and plug-and-play. (\textcolor{blue}{Institution}, \textcolor{red}{region}, facility otherwise.)
 	\begin{itemize}
 		\item Cycamore: Sink, Storage, Recipe Reactor, Fuelfab, Enrichment, Source, \textcolor{blue}{DeployInst}, Mixer, Separations, \textcolor{red}{GrowthRegion}
-		\item \textcolor{blue}{d3ploy}: Demand-driven deployment Institution (NEUP 16-10512)
-		\item CYBORG: Reactor depletion analysis tool using ORIGEN
-		\item CYDER: A CYclus Disposal Environment and Repository object.
-		\item CORRM: Continuous On-line Reprocessing Reactor Module.
-		\item Pyre: Pyroprocessing module with non-proliferation metrics
+		\item \textcolor{blue}{$^*$D3ploy}: Demand-driven deployment Institution (NEUP 16-10512) 
+		\item $^*$CYBORG: Reactor depletion analysis tool using ORIGEN
+		\item $^*$CYDER: A CYclus Disposal Environment and Repository object.
+		\item $^*$CORRM: Continuous On-line Reprocessing Reactor Module.
+		\item $^*$Pyre: Pyroprocessing module with non-proliferation metrics
+        \item $^*$Peddler: Simulate trucks and transport material between facilities.
 		\item And more..
 	\end{itemize}
+
+    \blfootnote{$^*$ Third party module in active development.}
 \end{frame}
 
 \begin{frame}
