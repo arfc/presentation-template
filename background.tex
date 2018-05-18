@@ -21,16 +21,23 @@
 \begin{frame}
     \frametitle{Timestep Execution}
     A simplified explanation: Each timestep:
-    \begin{enumerate}
-        \item Each \texttt{Facility} does its own thing
-        \item They offer / bid materials to the market (kernel)
-        \item Trade is made
-        \item User can develop / plug in facilities
-            \begin{itemize}
-                \item User can `design' their own fuel cycle
-                \item Highly customizable
-            \end{itemize}
-    \end{itemize}
+    
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=1.5cm]
+\node (Build) [process] {Build (kernel)};
+\node (Tick) [process, below of=Build] {Tick (agent)};
+\node (DRE) [process, below of=Tick]{Dynamic Resource Exchange (kernel) };
+\node (Tock) [process, below of=DRE]{Tock (agent)};
+\node (Decom) [process, below of=Tock] {Decommission (kernel)};
+
+\draw [arrow] (Build) -- (Tick); 
+\draw [arrow] (Tick) -- (DRE);
+\draw [arrow] (DRE) -- (Tock);
+\draw [arrow] (Tock) -- (Decom);
+\end{tikzpicture}
+\end{figure}
+
 \end{frame}
 
 \begin{frame}
@@ -46,18 +53,18 @@
 \begin{frame}
 	\frametitle{Terminology}
 	\begin{itemize}
-		\item Archetypes: A collection of logic and behavior which can be configured into a prototype which can then be instantiated in simulation as a agent. Archetypes are represented as C++ classes that inherit from the base cyclus::Agent class. (e.g. Reactor module, Sink module)
-		\item Prototypes: Archetype + parameters (e.g. Reactor with input-defined  \texttt{name, cycle time, assembly size, core size etc})
-		\item Agents: Every single `entity' in play during simulation (Region, Institution, Facility)
+		\item \textbf{Archetypes}: A collection of logic and behavior which can be configured into a prototype which can then be instantiated in simulation as a agent. Archetypes are represented as C++ classes that inherit from the base cyclus::Agent class. (e.g. Reactor module, Sink module)
+		\item \textbf{Prototypes}: Archetype + parameters (e.g. Reactor with input-defined  \texttt{name, cycle time, assembly size, core size etc})
+		\item \textbf{Agents}: Every single `entity' in play during simulation (Region, Institution, Facility)
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Terminology}
 	\begin{itemize}
-		\item Region: The group agent that is a collection of institutions (Can manage / control regions)
-		\item Institution: Agent that manages facilities (Can deploy, decommission facilities)
-		\item Facility: The agent that `trades' and does calculations (Trades material and transmutes, separates)
+		\item \textbf{Region}: The group agent that is a collection of institutions (Can manage / control regions)
+		\item \textbf{Institution}: Agent that manages facilities (Can deploy, decommission facilities)
+		\item \textbf{Facility}: The agent that `trades' and does calculations (Trades material and transmutes, separates)
 	\end{itemize}
 \end{frame}
 
