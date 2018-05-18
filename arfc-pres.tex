@@ -7,29 +7,35 @@
 \documentclass[9pt]{beamer}
 \usetheme[white]{Illinois}
 %\title[short title]{long title}
-\title[Short Title]{A Very Very Long Title for a Presentation about Cats}
+\title[Cyclus, an agent-based fuel cycle simulator]{Cyclus, an agent-based fuel cycle simulator}
 %\subtitle[short subtitle]{long subtitle}
-\subtitle[Short SubTitle]{Mostly Kittens}
+\subtitle[Brief Overview]{Brief Overview}
 %\author[short name]{long name}
-\author[Your Name]{Your Name\\Advanced Reactors and Fuel Cycles Group}
+\author[Jin Whan Bae, Kathryn Huff]{Jin Whan Bae, Kathryn Huff}
 %\date[short date]{long date}
-\date[04.01.2100]{April 1, 2100}
+\date[05.21.2018]{May 21, 2018}
 %\institution[short name]{long name}
 \institute[UIUC]{University of Illinois at Urbana-Champaign}
 
+%%%% Acronym support
+
+\usepackage[acronym,toc]{glossaries}
+\include{acros}
+
+\makeglossaries
+
 %\usepackage{bbding}
 \usepackage{amsfonts}
+\usepackage{adjustbox}
+\usepackage{fancyvrb}
 \usepackage{amsmath}
 \usepackage{xspace}
 \usepackage{graphicx}
 \usepackage{subfigure}
+\usepackage{listings}
 \usepackage{booktabs} % nice rules for tables
 \usepackage{microtype} % if using PDF
 \usepackage{bigints}
-\usepackage{minted}
-
-\newcommand{\units}[1] {\:\text{#1}}%
-\newcommand{\SN}{S$_N$}%{S$_\text{N}$}%{$S_N$}%
 \DeclareMathOperator{\erf}{erf}
 %I need some complimentary error funcitons... 
 \DeclareMathOperator{\erfc}{erfc}
@@ -39,12 +45,6 @@
 %Those icons in the references are terrible looking
 \setbeamertemplate{bibliography item}[text]
 
-%%%% Acronym support
-
-\usepackage[acronym,toc]{glossaries}
-\include{acros}
-
-\makeglossaries
 
 %try to get rid of header on title page\dots
 \makeatletter
@@ -53,6 +53,32 @@
         \def\beamer@entrycode{\vspace*{-\headheight}}
     }{}
 \makeatother
+
+
+\usepackage{booktabs} % nice rules (thick lines) for tables
+\usepackage{microtype} % improves typography for PDF
+\usepackage{xspace}
+\usepackage{tabularx}
+\usepackage[affil-it]{authblk}
+\usepackage{tikz}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows, decorations, shapes}
+
+\usetikzlibrary{shapes.geometric,arrows}
+\tikzstyle{process} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=blue!30]
+\tikzstyle{object} = [ellipse, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+\usepackage{cleveref}
+\usepackage{datatool}
+\newcolumntype{b}{X}
+\newcolumntype{s}{>{\hsize=.5\hsize}X}
+\newcolumntype{m}{>{\hsize=.75\hsize}X}
+
+\newcommand{\Cyclus}{\textsc{Cyclus}\xspace}%
+\graphicspath{ {images/} }
+\usetikzlibrary{positioning, arrows, decorations, shapes }
 
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -85,26 +111,22 @@
 \end{frame}
 }
 
-\section{Motivation}
-\subsection{Cat Behavior}
-\input{cat_behavior}
-\subsection{Cat Appearance}
-\input{cat_appearance}
-\subsection{Cat Math}
-\input{cat_math}
-\section{Methods}
-\subsection{Illinois Colors}
-\input{fierce}
-\section{Conclusion}
-\input{conclusion}
-\input{acks}
+\section{Before We Start}
+\input{background}
+
+
+\section{Running Simulations}
+\input{sim}
+
+\section{Output and Examples}
+\input{out}
+
 %%--------------------------------%%
 %%--------------------------------%%
 \begin{frame}[allowframebreaks]
   \frametitle{References}
-  \bibliographystyle{plain}
-  {\footnotesize \bibliography{bibliography.bib} }
-
+  \bibliographystyle{abbrv}
+  {\footnotesize \bibliography{bibliography} }
 \end{frame}
 
 %%--------------------------------%%
