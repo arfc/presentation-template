@@ -1,10 +1,33 @@
 \begin{frame}
-  \frametitle{Conclusion}
-        We showed many things.
+  \frametitle{Conclusions}
+        \begin{block}{SaltProc}
         \begin{itemize}
-                \item Cats are peculiar
-                \item Blue and Orange are fierce colors
-                \item Math can be rendered nicely
-                \item Cite your sources
+                \item New tool \textbf{SaltProc} was developed to simulate fuel depletion in the \gls{MSR}.
+                \item \textbf{SaltProc} was tested for \gls{MSBR} conceptial design, equilibrium fuel salt composition was found and verified against recent studies.
+		\item Average $^{232}$Th refill rate throughout 20 years of operation is approximately 2.39 kg/day or 100 g/GWh$_e$.
+		\end{itemize}
+		\end{block}
+		\begin{block}{Moltres}
+		\begin{itemize}
+		\item New tool \textbf{Moltres} was developed for modeling coupled physics in novel molten salt reactors.
+		\item 2D-axisymmetric and 3D multiphysics models are presented.
+		\item \textbf{Moltres} demonstrated strong parallel scaling (up to 384 physical cores) but further optimization required.
+		\item Over 55,000 node-hours were consumed on \textbf{Blue Waters} to perform this research.
         \end{itemize}
+        \end{block}
+        
+\end{frame}
+
+\begin{frame}
+  \frametitle{Future research}
+         
+              \begin{block}{Future research effort}
+                 \begin{enumerate}
+                \item Equilibrium state search for Transatomic \gls{MSR} (\textgreater 30,000 node-hours).
+                \item Fuel cycle performance analysis for load-following regime \\ (\textgreater 40,000 node-hours).
+                \item \gls{LWR} fuel transmutation in \gls{MSR} viability (\textgreater 30,000 node-hours).
+		\vspace*{0.15in}
+                \item Start exploring transients in Moltres, e.g. explore responses to reactivity insertion or gaseuos poisons removal (\textgreater 70,000 node-hours).
+               \end{enumerate}
+               \end{block}
 \end{frame}
