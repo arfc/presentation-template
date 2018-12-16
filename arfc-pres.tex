@@ -35,9 +35,6 @@
 \DeclareMathOperator{\erf}{erf}
 %I need some complimentary error funcitons... 
 \DeclareMathOperator{\erfc}{erfc}
-%page numbers
-\setbeamertemplate{footline}[page number]
-\setbeamertemplate{caption}[numbered]
 %Those icons in the references are terrible looking
 \setbeamertemplate{bibliography item}[text]
 
@@ -56,6 +53,16 @@
     }{}
 \makeatother
 
+\makeatother
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+    \rightline{\insertframenumber{} / \inserttotalframenumber\hspace*{1ex}}
+  }%
+  \vskip0pt%
+}
+\makeatletter
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% From uw-beamer Here's a handy bit of code to place at 
