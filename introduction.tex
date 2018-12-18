@@ -4,6 +4,15 @@
                \begin{figure}[t]
                 \vspace*{-0.1in}
                 \includegraphics[width=\textwidth]{./images/arfc1.png}
+                       \caption{Current undergraduate and graduate students.}
+               \end{figure}            
+\end{frame}
+\begin{frame}
+  \frametitle{Advanced Reactors and Fuel Cycles group (PI: Kathryn Huff)}
+               \begin{figure}[t]
+                \vspace*{-0.1in}
+                \includegraphics[width=\textwidth]{./images/arfc-alums.png}
+                       \caption{Past ARFC Group members who contributed to this work.}
                \end{figure}            
 \end{frame}
 
@@ -31,13 +40,54 @@
         \end{block}
         \begin{block}{Mobile Fuel}
                 \begin{itemize}
-                        \item Graphite pebbles with embedded TRISO particles. 
+                        \item Mobile solid fuel elements, such as pebbles. 
                                 Clean salt coolant. (e.g. PB-FHR/Kairos)
-                        \item Non-circulating fuel salt. (e.g. Terrapower MCFR)
-                        \item Circulating fuel salt. (e.g. MSRE, MSBR, MSFR, 
+                        \item Non-circulating fuel salt, ``can-type''. (e.g. Terrapower MCFR)
+                        \item Circulating fuel salt ``pool-type''. (e.g. MSRE, MSBR, MSFR, 
                                 Terrestrial MSR, TAP MSR, etc.)
                 \end{itemize}
         \end{block}
+\end{frame}
+
+\begin{frame}
+        \frametitle{Stationary Solid Fuel}
+               \begin{figure}[t]
+                \vspace*{-0.1in}
+			\hspace*{-0.35in}
+                \includegraphics[height=0.5\textwidth]{./images/example-ahtr.png}
+                       \caption{The \gls{AHTR} \cite{forsberg_fuel_2004} 
+                       is an example of a fluoride salt cooled reactor 
+                       design fueled by a \textbf{stationary}, \textbf{solid} 
+                       prismatic graphite TRISO compacts, and cooled by clean fluoride salt.
+                       Image source \cite{gentry_burnable_2015}. }
+               \end{figure}            
+\end{frame}
+
+\begin{frame}
+        \frametitle{Mobile Solid Fuel}
+               \begin{figure}[t]
+                \vspace*{-0.1in}
+			\hspace*{-0.35in}
+                \includegraphics[height=0.2\textwidth]{./images/example-pbfhr-fuel.png}
+                \includegraphics[height=0.4\textwidth]{./images/example-pbfhr-core.jpg}
+                       \caption{The \gls{PBFHR} is an example reactor design 
+                       fueled by \textbf{solid}, \textbf{mobile} graphite 
+                       pebbles, with TRISO particles embedded in them. Image 
+                       source \cite{andreades_technical_2014}.}
+               \end{figure}            
+\end{frame}
+
+\begin{frame}
+        \frametitle{Mobile, Non-Circulating, Liquid Fuel}
+               \begin{figure}[t]
+                \vspace*{-0.1in}
+			\hspace*{-0.35in}
+                \includegraphics[height=0.5\textwidth]{./images/example-mcfr.jpg}
+                       \caption{The \gls{MCFR} from TerraPower is an example 
+                       reactor design with \textbf{liquid}, \textbf{mobile}, 
+                       \textbf{non-circulating} chloride salt fuel. Image 
+                       source \cite{terrapower_mcfr_2018,doene_southern_2018}.}
+               \end{figure}            
 \end{frame}
 
 \begin{frame}
@@ -64,7 +114,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Challenges in \gls{MSR} Simulation}
+  \frametitle{Challenges in Liquid-Fueled Reactor Simulation}
                   \vspace*{-0.05in}
                \begin{enumerate}
                 \item Contemporary burnup codes cannot treat fuel movement.
@@ -85,28 +135,29 @@
 \begin{frame}
   \frametitle{Approaches}
                   \vspace*{-0.1in}
-              \begin{block}{Point Reactor Kinetics \cite{huff_pyrk_2015}}
+              \begin{block}{Point Reactor Kinetics \cite{huff_pyrk:_2015}}
                 Only appropriate for stationary or nearly stationary fuels.
               \end{block}
 
               \begin{block}{Simulation of online reprocessing and depletion (SaltProc)\cite{rykhlevskii_saltproc}}
                \begin{enumerate}
                 \item Create high-fidelity full-core neutronics model of the 
-                        \gls{MSBR}.
+                        core neutronics can be necessary for reducing 
+                               compounding error.
                 \item SaltProc wraps SERPENT monte carlo neutron transport for 
                         simulation of liquid fuel reprocessing.
-                \item Enables day-scale neutronics resolution over many-decade depletion and fuel cycle performance.
+                \item Enables day-to-day rsolution off neutronics and reprocessing modeling 
+                        over many decades of depletion and fuel cycle performance.
                \end{enumerate}
                \end{block}
 
               \begin{block}{Multiphysics simulation of \gls{MSR} (Moltres)\cite{lindsay_introduction_2018}}
                \begin{enumerate}
-                \item Demonstrate steady-state coupling of neutron fluxes, precursors, and thermal-hydraulics.
-                \item Implement advective movement of delayed neutron precursors.
-                \item Demonstrate capabilities with 2D axisymmetric and 3D mesh.
+                \item Steady-state and transient coupling of neutron fluxes, 
+                        precursor drift, and thermal-hydraulics.
+                \item Incorporates advective movement of delayed neutron precursors.
+                \item 2D axisymmetric and 3D geometries supported.
                \end{enumerate}
                \end{block}
 
-
-              
 \end{frame}
