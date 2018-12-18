@@ -1,4 +1,4 @@
-\subsection{About ARFC}
+\subsection{ARFC Research Group}
 \begin{frame}
   \frametitle{Advanced Reactors and Fuel Cycles group (PI: Kathryn Huff)}
                \begin{figure}[t]
@@ -16,31 +16,30 @@
                \end{figure}            
 \end{frame}
 
-\subsection{Fission basics}
-\begin{frame}
-  \frametitle{Nuclear Fission Reaction}
-               \begin{figure}[t]
-                \vspace*{-0.1in}
-			\hspace*{-0.35in}
-                \includegraphics[height=0.25\textwidth]{./images/800px-Fission.png}
-               \end{figure}            
-\end{frame}
+\subsection{Molten Salt Reactors}
 
 \begin{frame}
-  \frametitle{Nuclear Fission Chain Reaction}
-               \begin{figure}[t]
-                \vspace*{-0.1in}
-			\hspace*{-0.35in}
-                \includegraphics[height=0.7\textwidth]{./images/715px-Chainreaction.png}
-               \end{figure}            
+        \frametitle{Types of Molten Salt Reactors}
+        \begin{block}{Stationary Fuel}
+                \begin{itemize}
+                        \item Prismatic graphite block with TRISO fuel and 
+                                coolant channels (e.g. FHR DR, TMSR-SF1). Clean salt 
+                                coolant.
+                        \item Stationary TRISO pebble matrix (e.g. TMSR-SF)
+                \end{itemize}
+
+        \end{block}
+        \begin{block}{Mobile Fuel}
+                \begin{itemize}
+                        \item Graphite pebbles with embedded TRISO particles. 
+                                Clean salt coolant. (e.g. PB-FHR/Kairos)
+                        \item Non-circulating fuel salt. (e.g. Terrapower MCFR)
+                        \item Circulating fuel salt. (e.g. MSRE, MSBR, MSFR, 
+                                Terrestrial MSR, TAP MSR, etc.)
+                \end{itemize}
+        \end{block}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Nuclear Power Plant}
-  \animategraphics[width=\textwidth,autoplay,loop]{6}{./images/gif/frame-}{0}{23}
-\end{frame}
-
-\subsection{Motivation}
 \begin{frame}
   \frametitle{Why Molten Salt Reactors?}
                   \vspace*{-0.1in}
@@ -65,13 +64,13 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Challenges in simulation \gls{MSR}}
+  \frametitle{Challenges in \gls{MSR} Simulation}
                   \vspace*{-0.05in}
                \begin{enumerate}
                 \item Contemporary burnup codes cannot treat fuel movement.
-                \item Neutron precursor location is hard to estimate.
+                \item Neutron precursor locations drift before neutron emission.
                 \item Operational and safety parameters change during reactor operation.
-                \item Power generation strongly depends on fuel temperature and vica versa.
+                \item Neutronics and thermal hydraulics are tightly interdependent.
                \end{enumerate}
 
            \begin{figure}[t]
@@ -79,22 +78,28 @@
 			\hspace*{-0.2in}
                 \includegraphics[height=0.47\textwidth]{./images/coupled_physics.png}
 		\vspace*{-0.05in}
-		\caption{Challenges in simulating \gls{MSR} (Courtesy of Manuele Aufiero,2012).}
+		\caption{Challenges in simulating \glspl{MSR} (Image courtesy of Manuele Aufiero, 2012).}
      	 \end{figure}               
 \end{frame}
 
 \begin{frame}
-  \frametitle{Research objectives}
+  \frametitle{Approaches}
                   \vspace*{-0.1in}
-              \begin{block}{Goal \#1: Tool for online reprocessing depletion simulation (SaltProc)\cite{rykhlevskii_saltproc}}
+              \begin{block}{Point Reactor Kinetics \cite{huff_pyrk_2015}}
+                Only appropriate for stationary or nearly stationary fuels.
+              \end{block}
+
+              \begin{block}{Simulation of online reprocessing and depletion (SaltProc)\cite{rykhlevskii_saltproc}}
                \begin{enumerate}
-                \item Create high-fidelity full-core neutronics model of MSBR.
-                \item Develop online reprocessing simulation code, SaltProc, which expands the neutronics code capability for simulation liquid-fueled \gls{MSR} operation.
-                \item Analyse \gls{MSBR} neutronics and fuel cycle performance.
+                \item Create high-fidelity full-core neutronics model of the 
+                        \gls{MSBR}.
+                \item SaltProc wraps SERPENT monte carlo neutron transport for 
+                        simulation of liquid fuel reprocessing.
+                \item Enables day-scale neutronics resolution over many-decade depletion and fuel cycle performance.
                \end{enumerate}
                \end{block}
 
-              \begin{block}{Goal \#2: Tool for multiphysics simulation of \gls{MSR} (Moltres)\cite{lindsay_introduction_2018}}
+              \begin{block}{Multiphysics simulation of \gls{MSR} (Moltres)\cite{lindsay_introduction_2018}}
                \begin{enumerate}
                 \item Demonstrate steady-state coupling of neutron fluxes, precursors, and thermal-hydraulics.
                 \item Implement advective movement of delayed neutron precursors.
