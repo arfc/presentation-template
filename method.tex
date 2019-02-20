@@ -1,14 +1,3 @@
-\begin{frame}
-  \frametitle{Moderator element geometry (Zone I)}
-    \begin{figure}[t]
-                \vspace*{-0.2in}
-                   \hspace*{-0.37in}
-                \includegraphics[height=0.60\textwidth]{./images/zone_I_mesh.png}
-                \vspace*{-0.05in}
-                \caption{Molten Salt Breeder Reactor Zone I unit cell geometry from the reference \cite{robertson_conceptual_1971} (left) and SERPENT 2 (right).}
-      \end{figure}
-     
-\end{frame}
 
 \begin{frame}
   \frametitle{Full-core SERPENT model of \gls{MSBR}}
@@ -31,6 +20,20 @@
   \end{figure}
            \vspace{-0.1in}
 \end{frame}
+
+\begin{frame}
+  \frametitle{Moderator element geometry (Zone I)}
+    \begin{figure}[t]
+                \vspace*{-0.2in}
+                   \hspace*{-0.37in}
+                \includegraphics[height=0.60\textwidth]{./images/zone_I_mesh.png}
+                \vspace*{-0.05in}
+                \caption{Molten Salt Breeder Reactor Zone I unit cell geometry from the reference \cite{robertson_conceptual_1971} (left) and SERPENT 2 (right).}
+      \end{figure}
+     
+\end{frame}
+
+
 
 \begin{frame}
 \frametitle{Online reprocessing method}
@@ -75,28 +78,5 @@
                \end{block}
                \vspace{-0.05in}
 $\qquad\qquad\qquad\qquad^{232}_{90}$Th+$^1_0$n$\rightarrow^{233}_{90}$Th$\xrightarrow[\text{22.3 min}]{\beta^-}$ $^{233}_{91}$Pa$\xrightarrow[\text{26.967 d}]{\beta^-}$ $^{233}_{92}$U
-\end{frame}
-
-\begin{frame}
-  \frametitle{MOOSE Framework}
-  \begin{columns}
-    \column[t]{6cm}
-  \begin{figure}[t]
-     \vspace{-0.25in}
-       \hspace*{-0.25in}
-       \includegraphics[height=0.65\textheight]{./images/moose.png}
-            \caption{Multi-physics Object-Oriented Simulation Environment (MOOSE).}
-  \end{figure}
-	\column[t]{6cm}
-               \begin{itemize}      
-	       \item Fully-coupled, fully-implicit multiphysics solver      
-               \item MOOSE interfaces with libMesh to discretize simulation volume into finite elements
-               \item Residuals and Jacobians handed off to PetSc which handles solution of resulting non-linear system of algebraic equations
-	       \item Automatically parallel (largest runs \textgreater 100,000 CPU cores!)
-	       \item Built-in mesh adaptivity
-	       \item Intuitive parallel multiscale solves
-               \end{itemize}
-
-  \end{columns}
 \end{frame}
 

@@ -13,7 +13,7 @@
 %\author[short name]{long name}
 \author[Huff]{Prof. Kathryn Huff\\Advanced Reactors and Fuel Cycles Group}
 %\date[short date]{long date}
-\date[12.18.2019]{December 18, 2019}
+\date[12.18.2018]{December 18, 2018}
 %\institution[short name]{long name}
 \institute[UIUC]{University of Illinois at Urbana-Champaign}
 
@@ -96,12 +96,12 @@
 
 \section{Introduction}
 \input{introduction}
-\section{Composition Evolution}
-\input{saltproc}
-\section{Kinetics with Feedback and Advection}
+\section{Point Kinetics \& TH Coupling}
 \input{pyrk}
+\section{Spatial Kinetics \& TH Coupling with Precursor Advection}
 \input{method}
 \input{results}
+\input{moltres}
 \input{conclusion}
 \input{acks}
 %%--------------------------------%%
@@ -167,7 +167,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Fissile isotopes producing in \gls{MSBR} core}
+  \frametitle{Fissile isotopes in the \gls{MSBR} core}
   \begin{columns}
     \column[t]{6cm}
                \begin{figure}[t]
@@ -191,23 +191,5 @@
               
 \end{frame}
 
-\begin{frame}
-  \frametitle{Generation IV Reactors}
-              \begin{block}{Goals for Generation IV Nuclear Energy Systems}
-               \begin{enumerate}
-                \item Sustainability
-                \item Economics
-                \item Safety and Reliability
-                \item Proliferation Resistance and Physical Protection
-               \end{enumerate}
-               \end{block}
-               \begin{figure}[t]
-                \vspace*{-0.11in}
-		\hspace*{-0.15in}
-                \includegraphics[height=0.43\textwidth]{./images/gen4_road_map.png}
-                \vspace*{-0.1in}
-                \caption{A Technology Roadmap for Gen IV Nuclear Energy Systems.}
-               \end{figure}            
-\end{frame}
 
 \end{document}
