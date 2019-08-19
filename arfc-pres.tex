@@ -1,19 +1,18 @@
 %        File: arfc-pres.tex
 %     Created: 2018-12-15 10:00 AM 2018 C
 %
-
-
 %\documentclass[11pt,handout]{beamer}
 \documentclass[9pt,handout]{beamer}
 \usetheme[white]{Illinois}
 %\title[short title]{long title}
 \title[Kineticss in Liquid-Fueled Reactors]{Neutron Kinetics and Dynamics in Liquid-Fueled Nuclear Reactors}
 %\subtitle[short subtitle]{long subtitle}
-\subtitle[Purdue]{Purdue Nuclear Engineering Seminar}
+\subtitle[SIAMCSE19]{SIAM CSE 2019 Minisyposium MS187:\\
+Computational Methods for Linear Kinetic Transport Equations}
 %\author[short name]{long name}
 \author[Huff]{Kathryn Huff\\Advanced Reactors and Fuel Cycles Group}
 %\date[short date]{long date}
-\date[02.20.2019]{February 20, 2019}
+\date[02.27.2019]{February 27, 2019}
 %\institution[short name]{long name}
 \institute[UIUC]{University of Illinois at Urbana-Champaign}
 
@@ -95,13 +94,14 @@
 }
 
 \section{Introduction}
-\input{npre}
-\input{introduction}
+\input{intro-arfc}
+\subsection{Neutron Kinetics}
+\input{kinetics}
+\subsection{Molten Salt Reactors}
+\input{msrs}
 \section{Point Kinetics \& TH Coupling}
 \input{pyrk}
 \section{Spatial Kinetics \& TH Coupling with Precursor Advection}
-\input{method}
-\input{results}
 \input{moltres}
 \input{conclusion}
 \input{acks}
@@ -110,39 +110,14 @@
 \begin{frame}[allowframebreaks]
   \frametitle{References}
   \bibliographystyle{plain}
-  {\footnotesize \bibliography{2018-huff-mumbai} }
+  {\footnotesize \bibliography{bibliography} }
 
 \end{frame}
 
 %%---BACKUP SLIDES----------------%%
 
-\begin{frame}
-  \frametitle{Processing options for \gls{MSR} fuels}
-               \begin{figure}[t]
-                \vspace*{-0.1in}
-			\hspace{-0.3in}
-                \includegraphics[height=0.6\textwidth]{./images/periodic_map.png}
-               \end{figure}
-              
-\end{frame}
-
-\begin{frame}
-  \frametitle{BUBBLE GENERATOR AND GAS SEPARATOR for \gls{MSBR}}
-               \begin{figure}[t]
-                \vspace*{-0.1in}
-                \includegraphics[height=0.7\textwidth]{./images/gas_separation.png}
-               \end{figure}
-              
-\end{frame}
-
-\begin{frame}
-  \frametitle{Chemical processing facility for \gls{MSBR}}
-               \begin{figure}[t]
-                \vspace*{-0.1in}
-                \includegraphics[height=0.65\textwidth]{./images/flowsheet.pdf}
-               \end{figure}
-              
-\end{frame}
+\input{saltproc}
+\input{saltproc-results}
 
 \begin{frame}
   \frametitle{Multiplication factor dynamics during Rb, Sr, Cs, Ba removal (3435days)}
@@ -182,15 +157,5 @@
                \end{figure}
     \end{columns}              
 \end{frame}
-
-\begin{frame}
-  \frametitle{\gls{MSBR} plain view}
-               \begin{figure}[t]
-                \vspace*{-0.1in}
-                \includegraphics[height=0.75\textwidth]{./images/msbr_plain.png}
-               \end{figure}
-              
-\end{frame}
-
 
 \end{document}

@@ -3,13 +3,12 @@
   \begin{columns}
     \column[t]{6cm}
   \begin{figure}[t]
-     \vspace{-0.25in}
-       \hspace*{-0.25in}
-       \includegraphics[height=0.65\textheight]{./images/moose.png}
+       \includegraphics[width=\linewidth]{./images/moose.png}
             \caption{Multi-physics Object-Oriented Simulation Environment (MOOSE).}
   \end{figure}
 	\column[t]{6cm}
                \begin{itemize}
+               \item From Idaho National Lab (Gaston et al.  \cite{gaston_parallel_2009})
 	       \item Fully-coupled, fully-implicit multiphysics solver
                \item MOOSE interfaces with libMesh to discretize simulation volume into finite elements
                \item Residuals and Jacobians handed off to PetSc which handles solution of resulting non-linear system of algebraic equations
@@ -23,15 +22,16 @@
 
 \begin{frame}
         \frametitle{Moltres (Coupling in MOOSE)}
+        \begin{center}
   \begin{figure}
    \vspace{-0.05in}
-   \hspace*{-0.15in}
    \includegraphics[width=1.1\textwidth]{./images/moltres-moose-diag.png}
     \end{figure}
+        \end{center}
 \end{frame}
 
 \begin{frame}
-        \frametitle{Inro to Moltres}
+        \frametitle{Intro to Moltres}
         \begin{itemize}  
                 \item Fluid-fuelled, molten salt reactors
                 \item Multi-group diffusion (arbitrary groups)
@@ -40,9 +40,11 @@
                 \item 3D unstructured
                 \item 2D axisymmetric
                 \item 3D structured 
-                \item Initial developer: Alexander Lindsay
+                \item Initial developer: Alexander Lindsay \cite{lindsay_introduction_2018}
+                \item Continued use and development ongoing at UIUC.
         \end{itemize}
 \end{frame}
+
 
 \begin{frame}
         \frametitle{Acquiring Moltres}
@@ -152,47 +154,35 @@
 
 \end{frame}
 
-
 \begin{frame}
-        \frametitle{Moltres MSRE Simulation}
-  \begin{figure}
-   \vspace{-0.05in}
-   \includegraphics[height=0.85\textheight]{./images/msre.png}
-    \end{figure}
+        \frametitle{Where does the data come from?}
+        \begin{center} 
+                \begin{figure}
+                        \includegraphics[width=0.45\textwidth]{./images/plan_msbr.png}
+                        \includegraphics[width=0.45\textwidth]{./images/plan_msbr_results.png}
+                        \caption{Above, full \gls{MSBR} core neutronics simulation in 
+                        Serpent (Rykhlevskii et al. 2019
+                        \cite{rykhlevskii_modeling_2019}). Left: geometry. 
+                        Right: Monte Carlo Neutron Transport scattering and 
+                        fission.}
+                \end{figure}
+        \end{center}
 \end{frame}
 
 
 \begin{frame}
-        \frametitle{Moltres MSRE Simulation}
+        \frametitle{Moltres (coupling in MOOSE) (Lindsay et al. 2018 \cite{lindsay_introduction_2018})}
   \begin{figure}
    \vspace{-0.05in}
-   \includegraphics[width=1.2\textwidth]{./images/moltres-input.png}
-          \caption{Data used in \cite{lindsay_introduction_2018}.}
-    \end{figure}
-\end{frame}
-
-\begin{frame}
-        \frametitle{Moltres MSRE Simulation}
-  \begin{figure}
-   \vspace{-0.05in}
-   \includegraphics[width=0.85\textwidth]{./images/moltres-composition.png}
-          \caption{Data used in \cite{lindsay_introduction_2018}.}
-    \end{figure}
-\end{frame}
-
-
-\begin{frame}
-        \frametitle{Moltres (coupling in MOOSE)}
-  \begin{figure}
-   \vspace{-0.05in}
-   \includegraphics[height=0.85\textheight]{./images/lindsay_msre_moose.png}
+   \includegraphics[height=0.75\textheight]{./images/lindsay_msre_moose.png}
     \end{figure}
 \end{frame}
 
 
 
 \begin{frame}
-        \frametitle{Moltres Precursor Drift}
+        \frametitle{Moltres Precursor Drift 
+        (Lindsay et al. 2018 \cite{lindsay_introduction_2018})}
   \begin{figure}
    \vspace{-0.1in}
    \includegraphics[width=0.28\textwidth]{./images/auto_diff_rho_pre1.eps}
@@ -204,33 +194,6 @@
     \end{figure}
 \end{frame}
 
-
-
-\begin{frame}
-        \frametitle{Moltres MSRE Comparison}
-  \begin{figure}
-   \vspace{-0.05in}
-   \includegraphics[height=0.85\textheight]{./images/moltres-axial.png}
-    \end{figure}
-\end{frame}
-
-
-\begin{frame}
-        \frametitle{Moltres MSRE Comparison}
-  \begin{figure}
-   \vspace{-0.05in}
-   \includegraphics[height=0.85\textheight]{./images/moltres-axisym-flux.png}
-    \end{figure}
-\end{frame}
-
-
-\begin{frame}
-        \frametitle{Moltres MSRE Comparison}
-  \begin{figure}
-   \vspace{-0.05in}
-   \includegraphics[height=0.85\textheight]{./images/moltres-axial-flux.png}
-    \end{figure}
-\end{frame}
 
 
 \begin{frame}
