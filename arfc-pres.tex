@@ -5,17 +5,20 @@
 
 %\documentclass[11pt,handout]{beamer}
 \documentclass[9pt,handout]{beamer}
+\hypersetup{colorlinks,allcolors=.,urlcolor=orange}
 \usetheme[white]{Illinois}
 %\title[short title]{long title}
-\title[Kineticss in Liquid-Fueled Reactors]{Neutron Kinetics and Dynamics in Liquid-Fueled Nuclear Reactors}
+\title[Multiphysics using MOOSE]{Multiphysics Modeling Using the MOOSE 
+Framework}
 %\subtitle[short subtitle]{long subtitle}
-\subtitle[Purdue]{Purdue Nuclear Engineering Seminar}
 %\author[short name]{long name}
-\author[Huff]{Kathryn Huff\\Advanced Reactors and Fuel Cycles Group}
+\author[Huff]{Kathryn Huff\\Advanced Reactors and Fuel Cycles Group\\University 
+of Illinois at Urbana-Champaign}
 %\date[short date]{long date}
-\date[02.20.2019]{February 20, 2019}
+\date[03.17.2021]{March 17, 2021}
 %\institution[short name]{long name}
 \institute[UIUC]{University of Illinois at Urbana-Champaign}
+\institute[IAEA]{IAEA Workshop on Multiphysics Modelling to Optimize Design and Safety of Advanced Nuclear Reactors}
 
 \usepackage{lmodern}
 %\usepackage{bbding}
@@ -94,103 +97,22 @@
 \end{frame}
 }
 
-\section{Introduction}
-\input{npre}
+\section{Different Problems, Different Solutions}
 \input{introduction}
-\section{Point Kinetics \& TH Coupling}
-\input{pyrk}
-\section{Spatial Kinetics \& TH Coupling with Precursor Advection}
-\input{method}
-\input{results}
-\input{moltres}
-\input{conclusion}
+%\section{Point Kinetics \& TH Coupling}
+%\input{pyrk}
+\section{MOOSE Framework}
+\input{moose}
 \input{acks}
 %%--------------------------------%%
 %%--------------------------------%%
 \begin{frame}[allowframebreaks]
   \frametitle{References}
   \bibliographystyle{plain}
-  {\footnotesize \bibliography{2018-huff-mumbai} }
+  {\footnotesize \bibliography{2021-huff-iaea} }
 
 \end{frame}
-
-%%---BACKUP SLIDES----------------%%
-
-\begin{frame}
-  \frametitle{Processing options for \gls{MSR} fuels}
-               \begin{figure}[t]
-                \vspace*{-0.1in}
-			\hspace{-0.3in}
-                \includegraphics[height=0.6\textwidth]{./images/periodic_map.png}
-               \end{figure}
-              
-\end{frame}
-
-\begin{frame}
-  \frametitle{BUBBLE GENERATOR AND GAS SEPARATOR for \gls{MSBR}}
-               \begin{figure}[t]
-                \vspace*{-0.1in}
-                \includegraphics[height=0.7\textwidth]{./images/gas_separation.png}
-               \end{figure}
-              
-\end{frame}
-
-\begin{frame}
-  \frametitle{Chemical processing facility for \gls{MSBR}}
-               \begin{figure}[t]
-                \vspace*{-0.1in}
-                \includegraphics[height=0.65\textwidth]{./images/flowsheet.pdf}
-               \end{figure}
-              
-\end{frame}
-
-\begin{frame}
-  \frametitle{Multiplication factor dynamics during Rb, Sr, Cs, Ba removal (3435days)}
-               \begin{figure}[t]
-                \vspace*{-0.1in}
-                \includegraphics[height=0.7\textwidth]{./images/keff_3435st.png}
-               \end{figure}
-              
-\end{frame}
-
-
-\begin{frame}
-  \frametitle{\gls{MSBR} neutron energy spectrum for different regions}
-               \begin{figure}[t]
-                \vspace*{-0.1in}
-                \includegraphics[height=0.35\textwidth]{./images/spectrum_zones_init.png}
-               \end{figure}
-               \begin{figure}[t]
-                \vspace*{-0.1in}
-                \includegraphics[height=0.35\textwidth]{./images/spectrum_zones_eq.png}
-               \end{figure}
-              
-\end{frame}
-
-\begin{frame}
-  \frametitle{Fissile isotopes in the \gls{MSBR} core}
-  \begin{columns}
-    \column[t]{6cm}
-               \begin{figure}[t]
-                \vspace*{-0.1in}
-                \includegraphics[height=0.75\textwidth]{./images/fissile_short.png}
-               \end{figure}
-    \column[t]{6cm}
-               \begin{figure}[t]
-                \vspace*{-0.1in}
-                \includegraphics[height=0.75\textwidth]{./images/fissile_long.png}
-               \end{figure}
-    \end{columns}              
-\end{frame}
-
-\begin{frame}
-  \frametitle{\gls{MSBR} plain view}
-               \begin{figure}[t]
-                \vspace*{-0.1in}
-                \includegraphics[height=0.75\textwidth]{./images/msbr_plain.png}
-               \end{figure}
-              
-\end{frame}
-
 
 \end{document}
+
+%%---BACKUP SLIDES----------------%%
