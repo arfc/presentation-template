@@ -99,11 +99,74 @@ of Illinois at Urbana-Champaign}
 
 \section{Different Problems, Different Solutions}
 \input{introduction}
-%\section{Point Kinetics \& TH Coupling}
-%\input{pyrk}
+\section{Point Kinetics \& TH Coupling}
+\input{pyrk}
+\subsection{Neutron Kinetics}
+\input{kinetics}
+\subsection{Molten Salt Reactors}
+\input{msrs}
+\section{Point Kinetics \& TH Coupling}
+\input{pyrk}
 \section{MOOSE Framework}
 \input{moose}
 \input{acks}
+\section{Spatial Kinetics \& TH Coupling with Precursor Advection}
+\input{moltres}
+\input{conclusion}
+\input{acks}
+%%--------------------------------%%
+%%--------------------------------%%
+\begin{frame}[allowframebreaks]
+  \frametitle{References}
+  \bibliographystyle{plain}
+  {\footnotesize \bibliography{bibliography} }
+
+\end{frame}
+
+%%---BACKUP SLIDES----------------%%
+
+\input{saltproc}
+%        File: arfc-pres.tex
+\input{saltproc-results}
+
+\begin{frame}
+  \frametitle{Multiplication factor dynamics during Rb, Sr, Cs, Ba removal (3435days)}
+               \begin{figure}[t]
+                \vspace*{-0.1in}
+                \includegraphics[height=0.7\textwidth]{./images/keff_3435st.png}
+               \end{figure}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{\gls{MSBR} neutron energy spectrum for different regions}
+               \begin{figure}[t]
+                \vspace*{-0.1in}
+                \includegraphics[height=0.35\textwidth]{./images/spectrum_zones_init.png}
+               \end{figure}
+               \begin{figure}[t]
+                \vspace*{-0.1in}
+                \includegraphics[height=0.35\textwidth]{./images/spectrum_zones_eq.png}
+               \end{figure}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Fissile isotopes in the \gls{MSBR} core}
+  \begin{columns}
+    \column[t]{6cm}
+               \begin{figure}[t]
+                \vspace*{-0.1in}
+                \includegraphics[height=0.75\textwidth]{./images/fissile_short.png}
+               \end{figure}
+    \column[t]{6cm}
+               \begin{figure}[t]
+                \vspace*{-0.1in}
+                \includegraphics[height=0.75\textwidth]{./images/fissile_long.png}
+               \end{figure}
+    \end{columns}
+\end{frame}
 %%--------------------------------%%
 %%--------------------------------%%
 \begin{frame}[allowframebreaks]
@@ -112,6 +175,8 @@ of Illinois at Urbana-Champaign}
   {\footnotesize \bibliography{2021-huff-iaea} }
 
 \end{frame}
+
+
 
 \end{document}
 
