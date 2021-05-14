@@ -8,17 +8,16 @@
 \hypersetup{colorlinks,allcolors=.,urlcolor=orange}
 \usetheme[white]{Illinois}
 %\title[short title]{long title}
-\title[Multiphysics using MOOSE]{Multiphysics Modeling Using the MOOSE 
-Framework}
+\title[Multiphysics in MSRs]{Multiphysics in MSRs}
 %\subtitle[short subtitle]{long subtitle}
 %\author[short name]{long name}
 \author[Huff]{Kathryn Huff\\Advanced Reactors and Fuel Cycles Group\\University 
 of Illinois at Urbana-Champaign}
 %\date[short date]{long date}
-\date[03.17.2021]{March 17, 2021}
+\date[05.13.2021]{May 13, 2021}
 %\institution[short name]{long name}
 \institute[UIUC]{University of Illinois at Urbana-Champaign}
-\institute[IAEA]{IAEA Workshop on Multiphysics Modelling to Optimize Design and Safety of Advanced Nuclear Reactors}
+\institute[OSU]{Oregon State University Colloquium}
 
 \usepackage{lmodern}
 %\usepackage{bbding}
@@ -97,20 +96,17 @@ of Illinois at Urbana-Champaign}
 \end{frame}
 }
 
-\section{Different Problems, Different Solutions}
+\section{Intro}
 \input{introduction}
-\section{Point Kinetics \& TH Coupling}
-\input{pyrk}
-\subsection{Neutron Kinetics}
-\input{kinetics}
 \subsection{Molten Salt Reactors}
 \input{msrs}
+
+\subsection{Neutron Kinetics}
+\input{kinetics}
 \section{Point Kinetics \& TH Coupling}
 \input{pyrk}
 \section{MOOSE Framework}
 \input{moose}
-\input{acks}
-\section{Spatial Kinetics \& TH Coupling with Precursor Advection}
 \input{moltres}
 \input{conclusion}
 \input{acks}
@@ -119,9 +115,10 @@ of Illinois at Urbana-Champaign}
 \begin{frame}[allowframebreaks]
   \frametitle{References}
   \bibliographystyle{plain}
-  {\footnotesize \bibliography{bibliography} }
+  {\footnotesize \bibliography{2021-huff-iaea} }
 
 \end{frame}
+
 
 %%---BACKUP SLIDES----------------%%
 
@@ -167,17 +164,4 @@ of Illinois at Urbana-Champaign}
                \end{figure}
     \end{columns}
 \end{frame}
-%%--------------------------------%%
-%%--------------------------------%%
-\begin{frame}[allowframebreaks]
-  \frametitle{References}
-  \bibliographystyle{plain}
-  {\footnotesize \bibliography{2021-huff-iaea} }
-
-\end{frame}
-
-
-
 \end{document}
-
-%%---BACKUP SLIDES----------------%%
