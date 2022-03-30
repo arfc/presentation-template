@@ -1,5 +1,5 @@
 # Purpose of this Repository:
-This repository is intended as a template to standardize and ease the implimentation 
+This repository is intended as a template to standardize and ease the implementation 
 process for presentations from members of the Advanced Reactors and Fuel 
 Cycles group at the University of Illinois at Urbana-Champaign. While this version 
 of the template is geared towards an ARFC Member's report, it can be adapted to 
@@ -80,7 +80,7 @@ content to the Reference section that will be generated in the document.
 
 
 # ARFC Report Manual
-For ARFC specific guidelines for making a report, read the specifics at
+For ARFC specific guidelines for making a presentation, read the specifics at
 http://arfc.npre.illinois.edu/manual/guides/writing/presentation
 
 
