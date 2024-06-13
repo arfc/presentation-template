@@ -1,0 +1,45 @@
+\begin{frame}
+\frametitle{Online reprocessing method}
+  \begin{columns}
+    \column[t]{6cm}
+	\begin{figure}[t]
+                \vspace*{-0.35in}
+			\hspace{-0.3in}
+                 \includegraphics[height=\textwidth]{./images/saltproc_flowchart.pdf}
+                \vspace*{-0.05in}
+                \caption{Flow chart for the SaltProc.}
+      \end{figure}
+
+    \column[t]{6cm}
+             \begin{block}{SaltProc capabilities}
+               \begin{itemize}             
+               \item Remove specific isotopes from the core with specific parameters (reprocessing interval, mass rate, removal efficiency)
+               \item Add specific isotopes into the core
+               \item Maintain constant number density of specific isotope in the core
+	       \item Store stream vectors in an HDF5 database for further analysis or plots
+	       \item Generic geometry: an infinite medium, a unit cell, a multi-zone simplified assembly, or a full-core
+               \end{itemize}
+               \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Online reprocessing method}
+     \begin{figure}[t]
+                \vspace*{-0.1in}
+                  % \hspace*{-0.37in}
+                \includegraphics[height=0.45\textwidth]{./images/pa_isolation.png}
+                \vspace*{-0.09in}
+                \caption{Protactinium isolation with uranium removal by fluorination \cite{robertson_conceptual_1971}.}
+      \end{figure}
+                      \vspace*{-0.22in}
+             \begin{block}{Online reprocessing approach}
+               \begin{itemize}             
+               \item Continuously removes all poisons, noble metals, and gases.
+               \item $^{233}$Pa is continuously removed from the fuel salt into a decay tank.
+               \end{itemize}
+               \end{block}
+               \vspace{-0.05in}
+$\qquad\qquad\qquad\qquad^{232}_{90}$Th+$^1_0$n$\rightarrow^{233}_{90}$Th$\xrightarrow[\text{22.3 min}]{\beta^-}$ $^{233}_{91}$Pa$\xrightarrow[\text{26.967 d}]{\beta^-}$ $^{233}_{92}$U
+\end{frame}
+
