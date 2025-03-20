@@ -31,7 +31,7 @@
 \newcommand{\units}[1] {\:\text{#1}}%
 \newcommand{\SN}{S$_N$}%{S$_\text{N}$}%{$S_N$}%
 \DeclareMathOperator{\erf}{erf}
-%I need some complimentary error funcitons... 
+%I need some complimentary error functions...
 \DeclareMathOperator{\erfc}{erfc}
 %Those icons in the references are terrible looking
 \setbeamertemplate{bibliography item}[text]
@@ -61,9 +61,12 @@
   \vskip0pt%
 }
 \makeatletter
+% This will add figure numbers to captions.
+\setbeamertemplate{caption}[numbered]
+
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% From uw-beamer Here's a handy bit of code to place at 
+%% From uw-beamer Here's a handy bit of code to place at
 %% the beginning of your presentation (after \begin{document}):
 \newcommand*{\alphabet}{ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz}
 \newlength{\highlightheight}
